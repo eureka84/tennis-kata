@@ -4,10 +4,8 @@ import arrow.optics.Lens
 import arrow.optics.optics
 
 @optics
-data class Game(
-    val scoreP1: Score = Score.LOVE,
-    val scoreP2: Score = Score.LOVE
-) {
+data class Game(val scoreP1: Score = Score.LOVE, val scoreP2: Score = Score.LOVE) {
+
     companion object
 
     fun pointToPlayer1(): Game = updateGame(Game.scoreP1, Game.scoreP2)
@@ -43,14 +41,3 @@ data class Game(
             else -> "${scoreP1.value} - ${scoreP2.value}"
         }
 }
-
-
-enum class Score constructor(val value: String) {
-    LOVE("0"),
-    FIFTEEN("15"),
-    THIRTY("30"),
-    FORTY("40"),
-    GAME("GAME"),
-    ADVANTAGE("ADVANTAGE");
-}
-
