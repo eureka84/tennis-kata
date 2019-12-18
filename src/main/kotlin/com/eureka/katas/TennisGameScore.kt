@@ -28,7 +28,7 @@ data class Game(val scoreP1: Score = Score.LOVE, val scoreP2: Score = Score.LOVE
                 }
             }
             Score.ADVANTAGE -> playerScoringScoreLens.set(this, Score.GAME)
-            Score.GAME -> throw UnsupportedOperationException()
+            Score.GAME -> this
         }
 
     fun score(): String =
