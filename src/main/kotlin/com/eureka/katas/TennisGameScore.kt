@@ -33,8 +33,8 @@ data class Game(
             Score.GAME -> throw UnsupportedOperationException()
         }
 
-    fun score(): String  {
-        return when {
+    fun score(): String =
+        when {
             scoreP1 == Score.FORTY && scoreP2 == Score.FORTY -> "DEUCE"
             scoreP1 == Score.ADVANTAGE -> "ADVANTAGE PLAYER 1"
             scoreP1 == Score.GAME -> "GAME PLAYER 1"
@@ -42,7 +42,6 @@ data class Game(
             scoreP2 == Score.GAME -> "GAME PLAYER 2"
             else -> "${scoreP1.value} - ${scoreP2.value}"
         }
-    }
 }
 
 
