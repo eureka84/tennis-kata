@@ -1,0 +1,11 @@
+- [x] simple game only one player scores 
+    - [x] 15 - 0 
+    - [x] 30 - 0  
+    - [x] 40 - 0 
+    - [x] GAME PLAYER 1
+- [x] simple game only one player scores 
+    - [x] 0 - 15 
+    - [x] 0 - 30   
+    - [x] 0 - 40  
+    - [x] GAME PLAYER 2
+- [X] DEUCE
